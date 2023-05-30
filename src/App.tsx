@@ -15,7 +15,7 @@ function App() {
 			<CssBaseline />
 			<NavBar />
 
-			<Container maxWidth="xl">
+			<Container maxWidth="xl" sx={{ flexGrow: 1 }}>
 				<AppRouter />
 			</Container>
 
