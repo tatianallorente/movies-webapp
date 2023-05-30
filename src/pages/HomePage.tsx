@@ -1,7 +1,10 @@
+import Search from "../components/Search";
+import { SearchProvider } from "../context";
+
 export const HomePage = () => {
 	return (
-		<>
-			<h1>Homepage</h1>
-		</>
+		<SearchProvider>
+			<Search />
+		</SearchProvider>
 	);
 };
