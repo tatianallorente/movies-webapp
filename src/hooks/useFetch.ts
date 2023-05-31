@@ -57,10 +57,9 @@ export const useFetch = (url: string): StateReturn => {
 		}
 
 		try {
-			const urlFetch = nextPage
-				? `${url}&page=${page}`
-				: `${url}&page=${INITIAL_PAGE}`;
+			const urlFetch = nextPage ? `${url}&page=${page}` : `${url}&page=${INITIAL_PAGE}`;
 			const response = await fetch(urlFetch);
+
 			if (response.status !== 200) {
 				throw new Error("Error with the API call");
 			}

@@ -46,8 +46,7 @@ export const MyList = () => {
 				</>
 			)}
 
-			{((!loading && error === null && ratedMoviesByGuest?.length < 1) ||
-				!guestSessionId) && (
+			{((!loading && error === null && ratedMoviesByGuest?.length < 1) || !guestSessionId) && (
 				<Alert severity="warning">This user has not rated any movies yet</Alert>
 			)}
 

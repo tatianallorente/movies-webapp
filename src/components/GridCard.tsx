@@ -29,30 +29,16 @@ export const GridCard: FC<Props> = ({ movies, showRating = false }) => {
 	return (
 		<Grid container spacing={3}>
 			{movies?.map((movie) => {
-				const {
-					id,
-					original_title,
-					poster_path,
-					release_date,
-					rating = 0,
-				} = movie;
+				const { id, title, poster_path, release_date, rating = 0 } = movie;
 				const posterImg = `${URL_IMG_POSTER}${poster_path}`;
 
 				return (
 					<Grid item xs={4} sm={3} xl={2} key={id}>
 						<Card>
-							<CardActionArea
-								component={Link}
-								to={`/movie/${id}`}
-								state={{ movie }}
-							>
-								<CardMedia
-									component="img"
-									image={poster_path ? posterImg : no_img}
-									alt={original_title}
-								/>
+							<CardActionArea component={Link} to={`/movie/${id}`} state={{ movie }}>
+								<CardMedia component="img" image={poster_path ? posterImg : no_img} alt={title} />
 								<CardContent sx={{ textAlign: "center" }}>
-									<Tooltip title={original_title} placement="top">
+									<Tooltip title={title} placement="top">
 										<Typography
 											variant="h6"
 											color="textPrimary"
@@ -63,7 +49,7 @@ export const GridCard: FC<Props> = ({ movies, showRating = false }) => {
 												whiteSpace: "nowrap",
 											}}
 										>
-											{original_title}
+											{title}
 										</Typography>
 									</Tooltip>
 									<Typography variant="body1" color="text.secondary">
@@ -72,15 +58,8 @@ export const GridCard: FC<Props> = ({ movies, showRating = false }) => {
 									{showRating && (
 										<>
 											<Divider sx={{ my: 1.5 }} />
-											<Typography variant="body2">
-												My rating: ({rating})
-											</Typography>
-											<Rating
-												name="read-only"
-												value={rating / 2}
-												precision={0.5}
-												readOnly
-											/>
+											<Typography variant="body2">My rating: ({rating})</Typography>
+											<Rating name="read-only" value={rating / 2} precision={0.5} readOnly />
 										</>
 									)}
 								</CardContent>

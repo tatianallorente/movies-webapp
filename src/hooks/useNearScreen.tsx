@@ -34,10 +34,7 @@ export const useNearScreen = ({
 
 		const element = externalRef ? externalRef.current : fromRef.current;
 
-		const onChange = (
-			entries: IntersectionObserverEntry[],
-			observer: IntersectionObserverType
-		) => {
+		const onChange = (entries: IntersectionObserverEntry[], observer: IntersectionObserverType) => {
 			const el = entries[0];
 			if (el.isIntersecting) {
 				setShow(true);
