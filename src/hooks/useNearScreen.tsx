@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, FC } from "react";
+import { useEffect, useState, useRef } from "react";
 
 interface Props {
 	distance?: string;
