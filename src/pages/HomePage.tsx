@@ -1,10 +1,12 @@
+import { SearchProvider } from "../context/";
 import Search from "../components/Search";
-import { SearchProvider } from "../context";
+import SearchResults from "../components/SearchResults";
 
 export const HomePage = () => {
 	return (
 		<SearchProvider>
 			<Search />
+			<SearchResults />
 		</SearchProvider>
 	);
 };
