@@ -27,7 +27,7 @@ export const NavBar = () => {
 						src={tmdb_logo}
 						alt={tmdb_logo}
 						mr={2}
-						sx={{ maxHeight: "3rem", width: "auto" }}
+						sx={{ maxHeight: "3rem", width: "auto", cursor: "pointer" }}
 						onClick={goHome}
 					/>
 

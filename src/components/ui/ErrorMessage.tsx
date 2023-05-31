@@ -4,8 +4,6 @@ interface Props {
 	errMsg?: string;
 }
 
-export const ErrorMessage = ({
-	errMsg = "No se encontraron resultados",
-}: Props) => {
+export const ErrorMessage = ({ errMsg = "No results found" }: Props) => {
 	return <Alert severity="warning">{errMsg}</Alert>;
 };

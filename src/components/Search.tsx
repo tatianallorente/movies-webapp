@@ -41,6 +41,7 @@ const Search = () => {
 				placeholder="Avengers, Matrix..."
 				variant="outlined"
 				size="small"
+				color="secondary"
 				value={searchForm}
 				onChange={handleInputChange}
 			/>
