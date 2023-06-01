@@ -1,7 +1,7 @@
 import { API_KEY } from "../helpers/constants";
 
 interface Props {
-	idMovie: string;
+	idMovie: string | undefined;
 	guestSessionId: string;
 	vote: number;
 }

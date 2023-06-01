@@ -8,7 +8,7 @@ import { getGuestSession, postRatingMovie } from "../services";
 import Swal from "sweetalert2";
 
 interface RatingMovieFormProps {
-	idMovie: string;
+	idMovie: string | undefined;
 }
 
 const RatingMovieForm = ({ idMovie }: RatingMovieFormProps) => {
@@ -64,7 +64,7 @@ const RatingMovieForm = ({ idMovie }: RatingMovieFormProps) => {
 			value={rating / 2}
 			precision={0.5}
 			size="large"
-			onChange={(event, newValue) => {
+			onChange={(_event, newValue) => {
 				handleRatingChange(newValue);
 			}}
 			onBlur={handleRatingBlur}
