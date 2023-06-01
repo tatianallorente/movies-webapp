@@ -1,22 +1,20 @@
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline, Container } from "@mui/material";
-import { createTheme } from "@mui/material/styles";
 
 import { NavBar, Footer } from "./components/ui";
 import { RatingsProvider } from "./context";
 import { AppRouter } from "./router/AppRouter";
+import { customTheme } from "./theme/customTheme";
 import "./App.css";
 
 function App() {
-	const theme = createTheme();
-
 	return (
-		<ThemeProvider theme={theme}>
+		<ThemeProvider theme={customTheme}>
 			<RatingsProvider>
 				<CssBaseline />
 				<NavBar />
 
-				<Container maxWidth="xl" sx={{ flexGrow: 1 }}>
+				<Container maxWidth="xl" sx={{ flexGrow: 1, pt: 6 }}>
 					<AppRouter />
 				</Container>
 
