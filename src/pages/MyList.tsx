@@ -1,6 +1,6 @@
 import { useEffect, useRef, useContext } from "react";
 
-import { Alert, Box, Typography } from "@mui/material";
+import { Alert, Typography } from "@mui/material";
 
 import { API_KEY } from "../helpers/constants";
 import { RatingsContext } from "../context";
@@ -32,7 +32,7 @@ export const MyList = () => {
 	}, [isNearScreen]);
 
 	return (
-		<Box mt={3}>
+		<>
 			<Typography variant="h4" color="textPrimary" component="h1" gutterBottom>
 				My list
 			</Typography>
@@ -53,6 +53,6 @@ export const MyList = () => {
 			{error !== null && <Alert severity="error">{error}</Alert>}
 
 			{loadingNextPage && <Loader />}
-		</Box>
+		</>
 	);
 };

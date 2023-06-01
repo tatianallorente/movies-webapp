@@ -28,8 +28,7 @@ const Search = () => {
 			component="form"
 			autoComplete="off"
 			onSubmit={handleSearch}
-			mt={4}
-			mb={4}
+			mb={6}
 			display="flex"
 			justifyContent="center"
 			alignItems="stretch"
@@ -41,22 +40,24 @@ const Search = () => {
 				placeholder="Avengers, Matrix..."
 				variant="outlined"
 				size="small"
-				color="secondary"
+				color="success"
 				value={searchForm}
 				onChange={handleInputChange}
 			/>
-			<Button
-				variant="contained"
-				type="submit"
-				disableElevation
-				color="secondary"
-			>
+			<Button variant="contained" type="submit" disableElevation color="success">
 				Search
 			</Button>
 			<Button
 				variant="outlined"
 				type="button"
-				color="secondary"
+				sx={(theme) => ({
+					color: theme.palette.success.dark,
+					borderColor: theme.palette.success.dark,
+					"&:hover": {
+						color: theme.palette.success.dark,
+						borderColor: theme.palette.success.dark,
+					},
+				})}
 				onClick={resetFormAndCleanSearch}
 			>
 				Reset

@@ -36,7 +36,12 @@ export const GridCard: FC<Props> = ({ movies, showRating = false }) => {
 					<Grid item xs={4} sm={3} xl={2} key={id}>
 						<Card>
 							<CardActionArea component={Link} to={`/movie/${id}`} state={{ movie }}>
-								<CardMedia component="img" image={poster_path ? posterImg : no_img} alt={title} />
+								<CardMedia
+									component="img"
+									image={poster_path ? posterImg : no_img}
+									alt={title}
+									sx={{ aspectRatio: "1/1.5" }}
+								/>
 								<CardContent sx={{ textAlign: "center" }}>
 									<Tooltip title={title} placement="top">
 										<Typography
