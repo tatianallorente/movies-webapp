@@ -1,0 +1,42 @@
+import { OriginalLanguage } from "../../interfaces/movies";
+
+export const mockedData = {
+	page: 1,
+	results: [
+		{
+			id: 1,
+			title: "Movie 1",
+			release_date: new Date("June 22 2023"),
+			overview: "This is a great movie!",
+			genre_ids: [28, 12, 16],
+			original_language: OriginalLanguage.En,
+			original_title: "Movie 1",
+			poster_path: "/imagemovie.jpg",
+			vote_average: 6,
+			vote_count: 12,
+			adult: false,
+			backdrop_path: "",
+			popularity: 0,
+			video: false,
+		},
+		{
+			id: 2,
+			title: "Movie 2",
+			release_date: new Date("June 23 2023"),
+			overview: "Another awesome movie!",
+			genre_ids: [28, 12],
+			original_language: OriginalLanguage.Es,
+			original_title: "Movie 2",
+			poster_path: "",
+			vote_average: 8,
+			vote_count: 19,
+			adult: false,
+			backdrop_path: "",
+			popularity: 0,
+			video: false,
+			rating: 8,
+		},
+	],
+	total_pages: 1,
+	total_results: 2,
+};
